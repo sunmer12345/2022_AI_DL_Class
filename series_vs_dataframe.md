@@ -34,4 +34,6 @@ Series vs Dataframe圖
 	```
 	-5
 	```
-
+	```
+	obj2[['c','a','d']]
+	```
