@@ -142,5 +142,14 @@ Series vs Dataframe圖
 	frame = pandas.DataFrame(data)
 	frame
 	```
+	```
+		pop	state	year
+	0	1.5	Ohio	2000
+	1	1.7	Ohio	2001
+	2	3.6	Ohio	2002
+	3	2.4	Nevada	2001
+	4	2.9	Nevada	2002
+	5	3.2	Nevada	2003
+	```
   - 使用字典資料型態傳入 pandas.DataFrame()
 - 搜尋滿足條件的資料
