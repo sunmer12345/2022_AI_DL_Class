@@ -9,6 +9,8 @@ Series vs Dataframe圖
 	```
   	obj = pandas.Series([4,7,-5,3])
 	obj
+	```
+	```
 	0  4
 	1  7
 	2 -5
@@ -18,6 +20,8 @@ Series vs Dataframe圖
 	```
 	obj2 = pandas.Series([4,7,-5,3], index=['d','b','a','c'])
 	obj2
+	```
+	```
 	d  4
 	b  7
 	a -5
