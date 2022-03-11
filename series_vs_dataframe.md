@@ -7,7 +7,7 @@ Series vs Dataframe圖
 - 建立series
   - 使用pandas.Series()
 	```
-  	obj = pandas.Series([4,7,-5,3])
+  	obj = pandas.Series([4,7,-5,3])  // 建立 index
 	obj
 	```
 	```
@@ -17,7 +17,7 @@ Series vs Dataframe圖
 	3  3
 	```
 	```
-	obj2 = pandas.Series([4,7,-5,3], index=['d','b','a','c'])
+	obj2 = pandas.Series([4,7,-5,3], index=['d','b','a','c'])  // 建立指定 index 的 label
 	obj2
 	```
 	```
@@ -28,7 +28,7 @@ Series vs Dataframe圖
 	```
   - 使用字典資料型態傳入pandas.Series()
   	```
-	import numpy as np
+	import numpy as np  // 長度固定有順序的 dict，從 index 映射到 value
 	np.exp(obj2)
 	```
 	```
@@ -38,7 +38,20 @@ Series vs Dataframe圖
 	c   20.085537
 	dtype: float64
 	```
+	```
+	sdata = {'Ohio': 35000, 'Texas': 71000, 'Oregon':16000, 'Utah': 5000}  // 字典資料型態建立 series
+	obj3 = pandas.Series(sdata)
+	obj3
+	```
+	```
+	Ohio    35000
+	Oregon  16000
+	Texas	71000
+	Utah	 5000
+	dtype: int64
+	```
 - 搜尋滿足條件的資料
+  - 對應的查詢方式
 	```
 	obj2['a']
 	```
@@ -73,9 +86,28 @@ Series vs Dataframe圖
 	c   6
 	dtype: int64
 	```
+  - 字典資料型態查詢方式
 	```
 	'b' in obj2
 	```
 	```
 	True
+	```
+	```
+	'e' in obj2
+	```
+	```
+	False
+	```
+	```
+	states = ['California', 'Ohio', 'Oregon', 'Texas']  // 自行建立搜尋的順序
+	obj4 = pandas.Series(sdata, index=states)
+	obj4
+	```
+	```
+	California   NaN
+	Ohio	 35000.0
+	Oregon	 16000.0
+	Texas	 71000.0
+	dtype: float64
 	```
