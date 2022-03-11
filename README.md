@@ -5,7 +5,7 @@
 Series vs Dataframe圖
 
 1_1_series的運算
-	建立series
+<li>建立series</li>
 
 使用pandas.Series()
 使用字典資料型態傳入pandas.Series()
