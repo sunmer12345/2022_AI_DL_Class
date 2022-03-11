@@ -135,7 +135,7 @@ Series vs Dataframe圖
 - 建立DataFrame
   - 使用 pandas.DataFrame()
   	```
-  	data = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada', 'Nevada'], 
+  	data = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada', 'Nevada'],   // 集合多個 series 建立而成
         'year': [2000, 2001, 2002, 2001, 2002, 2003], 
         'pop': [1.5, 1.7, 3.6, 2.4, 2.9, 3.2]}
 	
@@ -151,5 +151,42 @@ Series vs Dataframe圖
 	4	2.9	Nevada	2002
 	5	3.2	Nevada	2003
 	```
+	```
+	frame2 = pd.DataFrame(data, columns=['year', 'state', 'pop', 'debt'],   // 若多建立 colume 則資料會顯示 NaN
+                      index=['one', 'two', 'three', 'four', 'five', 'six'])
+	frame2
+	```
+	```
+		year	state	pop	debt
+	one	2000	Ohio	1.5	NaN
+	two	2001	Ohio	1.7	NaN
+	three	2002	Ohio	3.6	NaN
+	four	2001	Nevada	2.4	NaN
+	five	2002	Nevada	2.9	NaN
+	six	2003	Nevada	3.2	NaN
+	```
   - 使用字典資料型態傳入 pandas.DataFrame()
 - 搜尋滿足條件的資料
+	```
+	frame.head()  // 只列出開頭5行
+	```
+	```
+		pop	state	year
+	0	1.5	Ohio	2000
+	1	1.7	Ohio	2001
+	2	3.6	Ohio	2002
+	3	2.4	Nevada	2001
+	4	2.9	Nevada	2002
+	```
+	```
+	pd.DataFrame(data, columns=['year', 'state', 'pop'])  // 指定 colume 的順序
+	```
+	```
+		year	state	pop
+	0	2000	Ohio	1.5
+	1	2001	Ohio	1.7
+	2	2002	Ohio	3.6
+	3	2001	Nevada	2.4
+	4	2002	Nevada	2.9
+	5	2003	Nevada	3.2
+	```
