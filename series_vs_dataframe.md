@@ -111,3 +111,36 @@ Series vs Dataframe圖
 	Texas	 71000.0
 	dtype: float64
 	```
+	```
+	pandas.isnull(obj4)  // 判斷值是否不存在，不存在回傳 True，反之回傳 False
+	```
+	```
+	California	True
+	Ohio		False
+	Oregon		False
+	Texas		False
+	dtype: bool
+	```
+	```
+	pandas.notnull(obj4)  // 判斷值是否存在，存在回傳 True，反之回傳 False
+	```
+	```
+	California	False
+	Ohio		True
+	Oregon		True
+	Texas		True
+	dtype: bool
+	```
+1_2_DataFrame的運算
+- 建立DataFrame
+  - 使用 pandas.DataFrame()
+  	```
+  	data = {'state': ['Ohio', 'Ohio', 'Ohio', 'Nevada', 'Nevada', 'Nevada'], 
+        'year': [2000, 2001, 2002, 2001, 2002, 2003], 
+        'pop': [1.5, 1.7, 3.6, 2.4, 2.9, 3.2]}
+	
+	frame = pandas.DataFrame(data)
+	frame
+	```
+  - 使用字典資料型態傳入 pandas.DataFrame()
+- 搜尋滿足條件的資料
