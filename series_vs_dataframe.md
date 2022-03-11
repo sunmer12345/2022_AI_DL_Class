@@ -37,3 +37,9 @@ Series vs Dataframe圖
 	```
 	obj2[['c','a','d']]
 	```
+	```
+	c  3
+	a -5
+	d  6
+	dtype: int64
+	```
